@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input, #result {
+  font-family: courier;
+  font-size: 1.2em;
+  padding: 0.3em;
+}
