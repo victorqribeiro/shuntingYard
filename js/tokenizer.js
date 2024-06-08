@@ -37,6 +37,8 @@ function parse(string) {
           output.push(item)
       }
     } else if (char in DIGITS) {
+      if (prevChar in DIGITS)
+        throw(`Empty space between digits at postion ${i}`)
       let num = `${DIGITS[char]}`
       let float = false
       while(string[i + 1] in DIGITS || string[i + 1] == '.') {
