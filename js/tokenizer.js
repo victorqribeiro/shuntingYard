@@ -28,6 +28,8 @@ function parse(string) {
     } else if (char == ')') {
       if (closePar >= openPar)
         throw(`Close parenthesis without open at position ${i}`)
+      if (prevChar == '(')
+        throw(`Empty parenthesis at position ${i}`)
       closePar += 1
       while(hold.length && hold.length[hold.length - 1] != '(') {
         const item = hold.pop()
